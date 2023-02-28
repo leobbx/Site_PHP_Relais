@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang = "fr">
+    <head>
+        <meta charset ="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ajouter</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <ul class="menu">
+              <li>
+                <a href="index.php" class="actif">Acceuil</a>
+              </li>
+              <li>
+                <a href="afficherJoueur.php">Joueur</a>
+              </li>
+              <li>
+                <a href="affichermatch.php">Match</a>
+              </li>
+        </ul>
+<form action="ajoutmatch.php" method="post">
+    <p> Date du match : <input type="date" name="datem" required/> </p>
+    <p> Heure du match : <input type="time" name= "heure" min ="8:00" max = "20:00" required/></p>
+    <p> Nom de l'equipe adverse : <input type="text" name="nom" required/></p>
+    <p> Lieu de rencontre : <input type = "text" name="lieu" required/></p>
+    <input type="reset" name="sub" value="Reintialiser"/> <input type="submit" name="sub" value="Envoyer"/>
+</form>
+</body>
+</html>

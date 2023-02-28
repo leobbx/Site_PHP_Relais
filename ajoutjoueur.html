@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang = "fr">
+    <head>
+        <meta charset ="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ajouter</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <ul class="menu">
+              <li>
+                <a href="index.php" class="actif">Acceuil</a>
+              </li>
+              <li>
+                <a href="afficherJoueur.php">Joueur</a>
+              </li>
+              <li>
+                <a href="affichermatch.php">Match</a>
+              </li>
+        </ul>
+<form action="ajoutjoueur.php" method="post" enctype="multipart/form-data">
+    <p> Numéro de licence : <input type="text" name="licence" required/> </p>
+    <p> Nom : <input type="text" name= "nom" required/></p>
+    <p> Prenom : <input type="text" name="prenom" required/></p>
+    <p> Photo : <input type="file" name="photo" required/> (formats supportés : .png, .jpeg, .jpg | taille maximale : 3 Mo)</p>
+    <p> Date de naissance : <input type = "date" name="date" max = "2009-12-31" min="1970-12-31" required/></p>
+    <p> Poids : <input type = "number" placeholder= "en kg" min = "50" max = "120" name = "poids" required /></p>
+    <p> Taille : <input type = "number" placeholder= "en cm" min = "130" max = "220" name ="taille" required /></p>
+    <p> Poste Préféré : <input type="radio"  name="poste" value="premier" checked><label for="premier">premier coureur</label> <input type="radio"  name="poste" value="second" checked> <label for="second">second coureur</label> <input type="radio"  name="poste" value="troisieme" checked> <label for="troisieme">troisième coureur</label> <input type="radio"  name="poste" value="quatrieme" checked> <label for="quatrieme">quatrième coureur</label>
+    </p>
+    <p>Statut : <input type="radio"  name="statut" value="actif" checked><label for="actif">Actif</label> <input type="radio" name="statut" value="blesse"> <label for="blesse">Blessé</label><input type="radio" name="statut" value="suspendu"><label for="suspendu">Suspendu</label><input type="radio" name="statut" value="absent">
+      <label for="absent">Absent</label>
+    </p>
+    <p> Commentaire * : <input type = "text" name="commentaire"/></p>
+    <br>
+    <p> *: Le renseignement n'est pas obligatoire</p>
+    <input type="reset" name="sub" value="Reintialiser"/> <input type="submit" name="sub" value="Envoyer"/>
+    
+
+</form>
+</body>
+</html>
